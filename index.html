@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RockRush • Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for the smiling animated icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="game-container">
+    <!-- Title -->
+    <header class="title-section">
+      <h1>ROCKRUSH</h1>
+      <p>Rock • Paper • Scissors</p>
+    </header>
+
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+      <div class="score-item">
+        <span class="score-label">🧑 YOU</span>
+        <span class="score-value" id="playerScoreDisplay">0</span>
+      </div>
+      <div class="score-item">
+        <span class="score-label">🤖 CPU</span>
+        <span class="score-value" id="computerScoreDisplay">0</span>
+      </div>
+    </div>
+
+    <!-- Battlefield -->
+    <main class="battlefield">
+      <!-- Player -->
+      <section class="player-area">
+        <div class="player-label">PLAYER</div>
+        <div class="character-box" id="playerCharacterBox">
+          <div class="character-emoji" id="playerEmoji">
+            <i class="fa-solid fa-face-smile fa-beat-fade" style="color: rgb(235, 217, 21);"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- VS -->
+      <section class="vs-section">
+        <div class="vs-badge">VS</div>
+        <div class="battle-result" id="resultMessage">PICK ONE!</div>
+      </section>
+
+      <!-- Computer -->
+      <section class="computer-area">
+        <div class="computer-label">COMPUTER</div>
+        <div class="character-box computer-box" id="computerCharacterBox">
+          <div class="character-emoji" id="computerEmoji">
+            <i class="fa-solid fa-face-smile fa-beat-fade" style="color: rgb(235, 217, 21);"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Choices -->
+    <section class="choices-section">
+      <button class="choice-btn" id="rockBtn" data-choice="rock">
+        <span class="btn-emoji">🪨</span>
+        <span class="btn-text">Rock</span>
+      </button>
+      <button class="choice-btn" id="paperBtn" data-choice="paper">
+        <span class="btn-emoji">📄</span>
+        <span class="btn-text">Paper</span>
+      </button>
+      <button class="choice-btn" id="scissorsBtn" data-choice="scissors">
+        <span class="btn-emoji">✂️</span>
+        <span class="btn-text">Scissors</span>
+      </button>
+    </section>
+
+    <!-- Play Again -->
+    <div class="play-again-container">
+      <button class="play-again-btn hidden" id="playAgainBtn">
+        <span>🔄</span> PLAY AGAIN
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
